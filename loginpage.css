@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   background:url(https://jooinn.com/images/green-world-concept-background.jpg);
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position: center;
+   background-color: rgb(60, 212, 232);
+   background-blend-mode: multiply;
+}
+header{
+    display: flex;
+    width: 100%;
+    padding: 30px 100px;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    align-items:centre;
+}
+header .logo{
+   position: relative;
+   text-decoration: none;
+   color: black;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-weight: 600;
+}
+header .navigation a{
+    color:black;
+    padding: 2px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    transition-property: background-color;
+}
+header .navigation a:not(:last-child){
+    margin-right: 30px;
+}
+header .navigation a:hover{
+    background-color: white;
+}
+.content{
+    max-width: 650px;
+    margin: 60px 100px;
+}
+.content .info h2{
+    font-size: 55px;
+    color: #226A80;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+.content .info span{
+    color: white;
+}
+.content .info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    word-spacing:2px;
+}
+.info-btn{
+    padding: 10px 35px;
+    background-color:rgba(8, 103, 255, 0.625);
+    border-radius: 20px;
+    text-decoration: none;
+    color:white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.info-btn:hover{
+    background-color:rgba(10, 43, 93, 0.515);
+}
+.media-icon {
+   display: flex;
+   flex-direction: row;
+   font-size: 25px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+.media-icon a{
+    color: black;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.media-icon a:not(:last-child){
+    margin-right: 30px;
+}
+.media-icon a:hover{
+    transform: scale(1.5);
+}
+#check{
+    display: none;
+}
+label {
+    display: none;
+}
+
+@media(max-width:960px){
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label .close-btn{
+        display: none;
+    }
+    label:hover{
+        color: white;
+    }
+    #check:checked~ header .navigation{
+        z-index: 2;
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+    }
+    #check:checked~ header .navigation a{
+        margin-bottom: 40px;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+   #check:checked~ header label .close-btn{
+    z-index: 2;
+    display: block;
+    position: fixed;
+
+   }
+   label .menu-btn{
+    position: absolute;
+   }
+    header .logo{
+        position: absolute;
+        margin-bottom: 10px;
+    }
+    .content .info h2{
+       font-size: 45px;
+       
+    }
+    #check{
+        display: none;
+    }
+
+}
+
